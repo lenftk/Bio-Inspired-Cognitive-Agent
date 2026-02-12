@@ -1,114 +1,157 @@
-# 🧬 Bio-Inspired Cognitive Agent (H-SEA)
-
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Experimental-awsm?style=for-the-badge&color=orange" />
-  <img src="https://img.shields.io/badge/Architecture-H--SEA-blue?style=for-the-badge" />
+
+# 🧬 H-SEA: Bio-Inspired Cognitive Agent
+### Hormone-modulated Self-Evolving Architecture
+
+<!-- 프로젝트 로고나 대표 이미지가 있다면 여기에 넣으세요. 없으면 생략 가능 -->
+<!-- <img src="assets/logo.png" width="150" height="150"> -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-High_Performance-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ollama-Local_LLM-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/ChromaDB-Vector_Memory-6236FF?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
-  <br/>
-  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-005850?style=flat-square&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ollama-Local_LLM-orange?style=flat-square" />
-  <img src="https://img.shields.io/badge/ChromaDB-Vector_Storage-6236FF?style=flat-square" />
+</p>
+
+<h3>
+  "What if AI had moods, felt stress, and needed to dream?"
+</h3>
+<p>
+  Moving beyond static LLM wrappers to create a dynamic, stateful digital organism.
+</p>
+
+<br/>
+
+<!-- 여기가 핵심입니다. 실제 실행 화면(대시보드) 스크린샷이나 GIF를 꼭 넣으세요! -->
+![Dashboard Demo](./assets/dashboard_preview.png)
+*(Fig 1. Real-time visualization of Hormone Levels and Neural Thoughts)*
+
 </div>
 
 ---
 
-### 🌿 "What if AI had moods and needed to dream?"
+## 🧐 Why This Project? (The Problem)
 
-**H-SEA (Hormone-modulated Self-Evolving Agent)** is an experimental cognitive architecture that simulates biological brain processes. It moves beyond static instruction-following by maintaining a dynamic internal "chemical" state that modulates reasoning depth, emotional tone, and memory consolidation.
+Traditional LLM Agents are **Stateless & Static**.
+1.  **No Mood:** They react the same way regardless of context history.
+2.  **No Evolution:** They don't optimize their resource usage based on cognitive load.
+3.  **Amnesia:** Short-term context windows fill up, and old information is lost forever.
 
-> [!IMPORTANT]
-> This is a scientific exploration into **Biologically Plausible AI**. It simulates hormone-driven behavior, synaptic pruning, and autonomous memory management.
-
----
-
-## �️ Core Cognitive Pillars
-
-<table align="center">
-  <tr>
-    <td align="center"><b>🧪 Hormone System</b><br/>Stress, Reward, Stability</td>
-    <td align="center"><b>🧠 Hybrid Memory</b><br/>STM Buffer + LTM Vector Store</td>
-    <td align="center"><b>🧬 Neuro-Evolution</b><br/>Dynamic NAS & Pruning</td>
-  </tr>
-</table>
-
-### 1. Hormonal Modulation (The "Mood" Engine)
-The agent calculates real-time levels of **Stress** and **Reward** based on interaction sentiment. 
-- **High Stress:** Triggers "Defensive Style" — concise, resource-efficient, and prioritized.
-- **High Reward:** Triggers "Proactive Style" — creative, inquisitive, and exploratory.
-
-### 2. Dreaming & Memory Consolidation
-When the system is idle, it enters a **"Dream State"**. It reviews fragmented short-term memories (STM), summarizes them for long-term relevance, and embeds them into **ChromaDB** (LTM).
-
-### 3. Dynamic Neural Complexity
-Simulates **Synaptic Plasticity**. The agent expands its reasoning complexity during high-load tasks and "prunes" (simplifies) its logic during periods of high stability to optimize token usage and response speed.
+**H-SEA solves this by mimicking biological efficiency:**
+> It introduces **Hormones (Global State)**, **Synaptic Pruning (NAS)**, and **Dreaming (Memory Consolidation)** to create an agent that feels "alive" and manages resources intelligently.
 
 ---
 
-## 🏗️ System Architecture
+## 🧠 Core Architecture
 
-<div align="center">
-  <img src="./assets/architecture_diagram.png" width="800px" />
-  <p><i>The system is composed of four interacting units: Hormone Modulation, Self-Evolving Neural Unit, Memory Hierarchy, and Continuous Inference Loop.</i></p>
-</div>
+The system mimics a biological brain's feedback loops using four interconnected units.
+
+![Architecture Diagram](./assets/architecture_diagram.png)
+
+### 1. 🧪 Hormone Modulation Unit (The "Soul")
+Unlike simple prompt engineering, the agent maintains a continuous vector state of hormones.
+- **Math behind the Mood:**
+  $H_{t} = H_{t-1} \cdot (1 - \lambda) + \Delta S_{input}$
+  *(Where $H$ is Hormone level, $\lambda$ is Decay Rate, and $S$ is Stimulus)*
+- **Dynamics:**
+    - **Stress (Cortisol):** High stress forces the agent into **"Survival Mode"** (Concise, Low Latency).
+    - **Reward (Dopamine):** High reward triggers **"Exploration Mode"** (Verbose, Proactive).
+
+### 2. 🛌 Dreaming & Memory Consolidation
+Just as humans consolidate memories during sleep, this agent utilizes **Idle Time**.
+- **The Process:**
+    1.  Detects `System_Idle` state (> 60s inactivity).
+    2.  Pulls fragmented Short-Term Memory (Buffer).
+    3.  Compresses logs into semantic summaries via LLM.
+    4.  Embeds and stores them in **ChromaDB** (Long-Term Memory).
+
+### 3. 🧬 Self-Evolving Neural Unit (NAS)
+Simulates **Synaptic Plasticity**.
+- **Expansion:** If `Stress > Threshold`, the agent dynamically injects more complex system prompts to handle difficult tasks.
+- **Pruning:** If `Stability` is high, it simplifies its instructions to save computational resources.
 
 ---
 
-## 🎬 Usage Scenarios
+## ⚡ Usage Scenarios
 
-> [!TIP]
-> **Try this:** Compliment the agent to see its "Reward" hormone spike, or challenge it to see how its "Stress" modulates its reasoning depth.
-
-| Interaction | Agent State | Behavioral Shift |
+| User Interaction | Agent Internal State | Behavioral Output |
 | :--- | :--- | :--- |
-| **"Thank you, you're amazing!"** | 😊 EUPHORIC | Becomes more conversational and creative. |
-| **"Stop failing, this is bad."** | ⚠️ STRESSED | Becomes concise, formal, and focuses on error correction. |
-| **System Idle (1 min)** | 💤 DREAMING | Performs background memory consolidation and self-evolution. |
+| **"You are useless! Fix this code!"** | 🔴 **Stress Spike** (0.8) | **Defensive & Concise:** "Understood. Correcting the error immediately." |
+| **"Wow, that works perfectly."** | 🟢 **Dopamine Hit** (0.9) | **Proactive & Friendly:** "Glad to hear that! Would you like to optimize it further?" |
+| **(No input for 2 mins)** | 💤 **Dreaming Mode** | *System Logs:* "Consolidating recent conversation into Vector DB..." |
 
 ---
 
-## 🛠️ Technical Stack
+## 🛠️ Technical Implementation
 
-- **Core:** Python 3.9+ with NumPy for physiological state simulation.
-- **Inference:** [Ollama](https://ollama.ai/) running `Qwen 2.5` (Optimized for low-latency reasoning).
-- **Storage:** [ChromaDB](https://www.trychroma.com/) for high-dimensional semantic search.
-- **Interface:** FastAPI & WebSockets for real-time visualization of internal thoughts.
+### 📂 Directory Structure
+```bash
+Bio-Inspired-Cognitive-Agent/
+├── config/              # Centralized Configuration (Hyperparameters)
+├── core/                # The "Brain" Logic
+│   ├── hormone_system.py  # State Machine & Decay Logic
+│   ├── neural_engine.py   # Interface for Ollama & NAS
+│   ├── memory_system.py   # Hybrid Memory (Buffer + Vector)
+│   └── inference_loop.py  # Main Thinking Process
+├── templates/           # Real-time Dashboard (WebSockets)
+└── main.py              # Application Entry Point
+```
+
+### 💻 Stack
+- **Backend:** Python 3.9, FastAPI (Async/Await)
+- **Communication:** WebSockets (Real-time bi-directional streaming)
+- **AI Backend:** Ollama (Qwen 2.5 - 1.5B/0.5B quantized models)
+- **Memory:** ChromaDB (Semantic Search with Cosine Similarity)
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Prerequisites**
-   - Install [Ollama](https://ollama.ai/)
-   - `ollama pull qwen2.5:1.5b`
-   - `ollama pull qwen2.5:0.5b`
+### 1. Prerequisites
+- Ollama installed and running.
+- Python 3.9+
 
-2. **Installation**
-   ```bash
-   git clone https://github.com/[YOUR_USERNAME]/Bio-Inspired-Cognitive-Agent.git
-   cd Bio-Inspired-Cognitive-Agent
-   pip install -r requirements.txt
-   ```
+### 2. Installation
+```bash
+# Clone the repository
+git clone https://github.com/[YOUR_USERNAME]/Bio-Inspired-Cognitive-Agent.git
+cd Bio-Inspired-Cognitive-Agent
 
-3. **Launch**
-   ```bash
-   python main.py
-   ```
-   *Dashboard available at: `http://localhost:8000`*
+# Install dependencies
+pip install -r requirements.txt
+
+# Pull necessary LLM models
+ollama pull qwen2.5:1.5b
+ollama pull qwen2.5:0.5b
+```
+
+### 3. Run the Organism
+```bash
+python main.py
+```
+> Open your browser to **http://localhost:8000** to view the neural dashboard.
+
+---
+
+## 🗺️ Roadmap & Future Work
+
+- [x] **Core Hormone Logic:** Implemented Decay and Stimulus response.
+- [x] **Hybrid Memory:** Connected STM Buffer with Vector DB.
+- [x] **Dreaming Loop:** Implemented background consolidation.
+- [ ] **Visual Topology:** Graph visualization of memory nodes.
+- [ ] **Multi-Agent Society:** Interaction between multiple H-SEA agents.
 
 ---
 
-## �‍💻 Developer & Vision
-
-**JuHo Min**  
-*Student & Developer*
-
-> "I am passionate about building AI systems that mimic biological efficiency and adaptability. This project is a step towards agents that don't just compute, but experience."
-
----
+## 👨‍💻 Developer
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Made%20with-Passion-red?style=for-the-badge" />
-</div>
+  <h3>JuHo Min</h3>
+  <p><i>Student & Developer</i></p>
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](./LICENSE)
+  [![Email](https://img.shields.io/badge/Email-juhomin16%40gmail.com-red?style=flat-square&logo=gmail)](mailto:juhomin16@gmail.com)
+  [![GitHub](https://img.shields.io/badge/GitHub-%40[YOUR_USERNAME]-black?style=flat-square&logo=github)](https://github.com/[YOUR_USERNAME])
+
+  *"I build systems that bridge the gap between biological intelligence and silicon efficiency."*
+</div>
