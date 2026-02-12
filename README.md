@@ -53,7 +53,7 @@ The system mimics a biological brain's feedback loops using four interconnected 
 Unlike simple prompt engineering, the agent maintains a continuous vector state of hormones.
 - **Math behind the Mood:**
   $H_{t} = H_{t-1} \cdot (1 - \lambda) + \Delta S_{input}$
-  *(Where $H$ is Hormone level, $\lambda$ is Decay Rate, and $S$ is Stimulus)*
+  *(Where $ H $ is Hormone level, $ \lambda $ is Decay Rate, and $ S $ is Stimulus)*
 - **Dynamics:**
     - **Stress (Cortisol):** High stress forces the agent into **"Survival Mode"** (Concise, Low Latency).
     - **Reward (Dopamine):** High reward triggers **"Exploration Mode"** (Verbose, Proactive).
