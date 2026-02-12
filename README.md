@@ -47,29 +47,10 @@ Simulates **Synaptic Plasticity**. The agent expands its reasoning complexity du
 
 ## 🏗️ System Architecture
 
-```mermaid
-graph TD
-    User([User User]) <--> WS[WebSocket Gateway]
-    WS <--> Loop[Continuous Inference Loop]
-    
-    subgraph "Biological Model"
-        Hormones[Hormone Modulator<br/>Stress/Reward/Stability]
-        Neural[Neural Engine<br/>Dynamic Reasoning Depth]
-    end
-    
-    subgraph "Memory Hierarchy"
-        STM[STM Buffer<br/>Recent Context]
-        LTM[(LTM ChromaDB<br/>Semantic Storage)]
-        Dreamer[Consolidation Loop<br/>Dream State]
-    end
-    
-    Loop --> Hormones
-    Hormones --> Neural
-    Neural --> STM
-    STM -- "Consolidate" --> Dreamer
-    Dreamer --> LTM
-    LTM -- "Retrieve" --> Neural
-```
+<div align="center">
+  <img src="./assets/architecture_diagram.png" width="800px" />
+  <p><i>The system is composed of four interacting units: Hormone Modulation, Self-Evolving Neural Unit, Memory Hierarchy, and Continuous Inference Loop.</i></p>
+</div>
 
 ---
 
