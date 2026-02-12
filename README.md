@@ -1,87 +1,96 @@
 # 🧬 Bio-Inspired Cognitive Agent (H-SEA Architecture)
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-WebSockets-green)
-![AI](https://img.shields.io/badge/AI-Ollama%20%2F%20LLM-orange)
-![DB](https://img.shields.io/badge/VectorDB-ChromaDB-purple)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005850?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-orange?style=for-the-badge)](https://ollama.ai/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_Store-purple?style=for-the-badge)](https://www.trychroma.com/)
 
-> **Experimental AI architecture simulating biological cognitive processes: Hormonal Modulation, Synaptic Pruning, and Memory Consolidation (Dreaming).**
+> **Experimental AI architecture simulating biological cognitive processes: Hormonal Modulation, Synaptic Pruning, and Memory Consolidation.**
 
-![Architecture Diagram](./assets/architecture_diagram.png)
-*(Please add your architecture image to the assets folder)*
+---
 
-## 📖 Project Overview
+## 🌟 Project Overview
 
-This project implements a **Self-Evolving AI Agent** that goes beyond static LLM interactions. Inspired by biological systems, it maintains a dynamic internal state ("Hormones") that modulates its behavior, neural complexity, and memory processing in real-time.
+This project implements a **Self-Evolving AI Agent** inspired by biological neural systems. Unlike static LLMs, this agent maintains a dynamic internal state ("Hormones") that influences its mood, reasoning complexity, and memory management.
 
-Designed to solve the problem of static, stateless AI, this agent possesses a **"Mood"** (Stress/Reward/Stability) and performs **"Dreaming"** (Self-play simulation) to consolidate short-term experiences into long-term semantic memory.
+### core Biological Concepts
+- **Hormonal Modulation:** Real-time state updates (Stress, Reward, Stability) based on interaction sentiment.
+- **Neuro-Evolution:** Dynamic adjustment of neural complexity (NAS) under varying cognitive loads.
+- **Memory Consolidation:** A "Dreaming" cycle that compresses short-term experiences into long-term semantic memory.
 
-## 🚀 Key Features
+---
 
-### 1. Hormone Modulation System 🧪
-- **Dynamic State:** Tracks `Stress`, `Reward`, and `Stability` levels based on user interaction sentiment.
-- **Behavioral Adaptation:** 
-    - High Stress → **High Alert Mode** (Concise, defensive responses).
-    - High Reward → **Proactive Mode** (Initiates conversation).
+## ⚡ Key Features
 
-### 2. Neuro-Evolution Mechanism 🧠
-- **NAS (Neural Architecture Search) Simulation:** 
-    - **Expand:** Increases prompt complexity and reasoning depth under high cognitive load.
-    - **Prune:** Optimizes for efficiency when the system is stable.
+| Feature | Description |
+| :--- | :--- |
+| **Hormone System** | Tracks `Stress`, `Reward`, and `Stability` to modulate response style. |
+| **Neural Engine** | Dynamically expands or prunes reasoning depth based on internal state. |
+| **Hybrid Memory** | Combines STM (Short-Term Buffer) with LTM (ChromaDB Vector Store). |
+| **Dreaming Loop** | Consolidates knowledge and evolves the agent during idle periods. |
+| **Real-time UI** | Live dashboard showing hormone levels, thoughts, and memory retrieval. |
 
-### 3. Dreaming & Memory Consolidation 🛌
-- **Self-Play Simulation:** During idle periods, the agent enters a "Dreaming" loop.
-- **Memory Transfer:** Compresses short-term buffer logs into semantic vectors and stores them in **ChromaDB** (Long-Term Memory).
-
-### 4. Continuous Inference Engine ⚡
-- **Real-time WebSockets:** Supports streaming responses and "Chain of Thought" visualization.
-- **Context-Aware:** Retrieves relevant memories using semantic similarity search before generating responses.
+---
 
 ## 🛠 Tech Stack
 
-- **Backend:** Python, FastAPI, Uvicorn
-- **Communication:** WebSockets (Real-time dashboard)
-- **AI/LLM:** Ollama (Local LLM), PyTorch
-- **Memory/Database:** ChromaDB (Vector Store), NumPy
-- **Frontend:** HTML5, JavaScript (Real-time Visualization)
+- **Logic:** Python 3.9+, NumPy, Sentence-Transformers
+- **API/Web:** FastAPI, WebSockets, Jinja2
+- **Vector DB:** ChromaDB
+- **LLM Engine:** Ollama (qwen2.5:1.5b / qwen2.5:0.5b)
+
+---
 
 ## 📂 Project Structure
 
 ```bash
-├── execution/           # Core Logic Modules
-│   ├── hormone_system.py  # Hormone calculation & State machine
-│   ├── neural_engine.py   # Interface with LLM & NAS logic
-│   ├── memory_system.py   # Hybrid Memory (Buffer + VectorDB)
-│   └── inference_loop.py  # Main thinking process
-├── templates/           # Dashboard UI
+├── config/              # Centralized Settings
+│   └── settings.py      # Project configurations
+├── core/                # Bio-Inspired Engine
+│   ├── hormone_system.py  # Hormonal logic & states
+│   ├── neural_engine.py   # LLM interface & evolution
+│   ├── memory_system.py   # Memory management logic
+│   ├── chroma_store.py    # Vector database interface
+│   └── inference_loop.py  # Main cognitive process
+├── templates/           # Web Dashboard UI
 ├── main.py              # Application Entry Point
-└── tests/               # System Integrity Tests
-💻 Installation & Usage
-Prerequisites
-Python 3.9+
-Ollama running locally
-Steps
-Clone the repository
-code
-Bash
-git clone https://github.com/[YOUR_USERNAME]/Bio-Inspired-Cognitive-Agent.git
-cd Bio-Inspired-Cognitive-Agent
-Install dependencies
-code
-Bash
-pip install -r requirements.txt
-Run the Server
-code
-Bash
-python main.py
-Access Dashboard
-Open browser: http://localhost:8000
-Observe the agent's hormone levels change as you chat.
-🔍 System Verification
-Run the integrated test suite to verify hormone logic and memory persistence:
-code
-Bash
-python test_system.py
-👨‍💻 Developer Note
-This project demonstrates the potential of biologically plausible AI architectures. By introducing internal states and sleep cycles, we can create agents that are not just reactive text generators, but persistent, evolving digital organisms.
-License: MIT
+└── tests/               # System Verification Tests
+```
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Clone & Navigate**
+   ```bash
+   git clone https://github.com/[YOUR_USERNAME]/Bio-Inspired-Cognitive-Agent.git
+   cd Bio-Inspired-Cognitive-Agent
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure Ollama**
+   Ensure Ollama is running and you have the required models:
+   ```bash
+   ollama pull qwen2.5:1.5b
+   ollama pull qwen2.5:0.5b
+   ```
+
+4. **Launch the Agent**
+   ```bash
+   python main.py
+   ```
+   Access the dashboard at: `http://localhost:8000`
+
+---
+
+## 👨‍💻 Developer & Contact
+
+**Juhomin**
+📧 [juhomin16@gmail.com](mailto:juhomin16@gmail.com)
+
+---
+*This project is an experimental demonstration of biologically plausible AI architectures. License: MIT*
