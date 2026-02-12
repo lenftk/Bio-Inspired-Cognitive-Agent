@@ -150,7 +150,7 @@ python main.py
   <p><i>Student & Developer</i></p>
 
   [![Email](https://img.shields.io/badge/Email-juhomin16%40gmail.com-red?style=flat-square&logo=gmail)](mailto:juhomin16@gmail.com)
-  [![GitHub](https://img.shields.io/badge/GitHub-%40[YOUR_USERNAME]-black?style=flat-square&logo=github)](https://github.com/[YOUR_USERNAME])
+  [![GitHub](https://img.shields.io/badge/GitHub-%40lenftk-black?style=flat-square&logo=github)](https://github.com/lenftk)
 
   *"I build systems that bridge the gap between biological intelligence and silicon efficiency."*
 </div>
