@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.env
+chroma_db/
+chroma_db_test/
+memory_db.json
+profile.json
+profile_test.json
+*.log
+.vscode/
+.idea/
+.DS_Store
+__MACOSX/
