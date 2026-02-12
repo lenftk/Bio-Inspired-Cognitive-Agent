@@ -23,7 +23,6 @@
 
 <br/>
 
-<!-- 여기가 핵심입니다. 실제 실행 화면(대시보드) 스크린샷이나 GIF를 꼭 넣으세요! -->
 ![Dashboard Demo](./assets/dashboard_preview.png)
 *(Fig 1. Real-time visualization of Hormone Levels and Neural Thoughts)*
 
