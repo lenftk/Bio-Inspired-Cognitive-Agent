@@ -1,96 +1,133 @@
-# 🧬 Bio-Inspired Cognitive Agent (H-SEA Architecture)
+# 🧬 Bio-Inspired Cognitive Agent (H-SEA)
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-005850?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-orange?style=for-the-badge)](https://ollama.ai/)
-[![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_Store-purple?style=for-the-badge)](https://www.trychroma.com/)
-
-> **Experimental AI architecture simulating biological cognitive processes: Hormonal Modulation, Synaptic Pruning, and Memory Consolidation.**
-
----
-
-## 🌟 Project Overview
-
-This project implements a **Self-Evolving AI Agent** inspired by biological neural systems. Unlike static LLMs, this agent maintains a dynamic internal state ("Hormones") that influences its mood, reasoning complexity, and memory management.
-
-### core Biological Concepts
-- **Hormonal Modulation:** Real-time state updates (Stress, Reward, Stability) based on interaction sentiment.
-- **Neuro-Evolution:** Dynamic adjustment of neural complexity (NAS) under varying cognitive loads.
-- **Memory Consolidation:** A "Dreaming" cycle that compresses short-term experiences into long-term semantic memory.
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Experimental-awsm?style=for-the-badge&color=orange" />
+  <img src="https://img.shields.io/badge/Architecture-H--SEA-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+  <br/>
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-005850?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ollama-Local_LLM-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/ChromaDB-Vector_Storage-6236FF?style=flat-square" />
+</div>
 
 ---
 
-## ⚡ Key Features
+### 🌿 "What if AI had moods and needed to dream?"
 
-| Feature | Description |
-| :--- | :--- |
-| **Hormone System** | Tracks `Stress`, `Reward`, and `Stability` to modulate response style. |
-| **Neural Engine** | Dynamically expands or prunes reasoning depth based on internal state. |
-| **Hybrid Memory** | Combines STM (Short-Term Buffer) with LTM (ChromaDB Vector Store). |
-| **Dreaming Loop** | Consolidates knowledge and evolves the agent during idle periods. |
-| **Real-time UI** | Live dashboard showing hormone levels, thoughts, and memory retrieval. |
+**H-SEA (Hormone-modulated Self-Evolving Agent)** is an experimental cognitive architecture that simulates biological brain processes. It moves beyond static instruction-following by maintaining a dynamic internal "chemical" state that modulates reasoning depth, emotional tone, and memory consolidation.
+
+> [!IMPORTANT]
+> This is a scientific exploration into **Biologically Plausible AI**. It simulates hormone-driven behavior, synaptic pruning, and autonomous memory management.
 
 ---
 
-## 🛠 Tech Stack
+## �️ Core Cognitive Pillars
 
-- **Logic:** Python 3.9+, NumPy, Sentence-Transformers
-- **API/Web:** FastAPI, WebSockets, Jinja2
-- **Vector DB:** ChromaDB
-- **LLM Engine:** Ollama (qwen2.5:1.5b / qwen2.5:0.5b)
+<table align="center">
+  <tr>
+    <td align="center"><b>🧪 Hormone System</b><br/>Stress, Reward, Stability</td>
+    <td align="center"><b>🧠 Hybrid Memory</b><br/>STM Buffer + LTM Vector Store</td>
+    <td align="center"><b>🧬 Neuro-Evolution</b><br/>Dynamic NAS & Pruning</td>
+  </tr>
+</table>
+
+### 1. Hormonal Modulation (The "Mood" Engine)
+The agent calculates real-time levels of **Stress** and **Reward** based on interaction sentiment. 
+- **High Stress:** Triggers "Defensive Style" — concise, resource-efficient, and prioritized.
+- **High Reward:** Triggers "Proactive Style" — creative, inquisitive, and exploratory.
+
+### 2. Dreaming & Memory Consolidation
+When the system is idle, it enters a **"Dream State"**. It reviews fragmented short-term memories (STM), summarizes them for long-term relevance, and embeds them into **ChromaDB** (LTM).
+
+### 3. Dynamic Neural Complexity
+Simulates **Synaptic Plasticity**. The agent expands its reasoning complexity during high-load tasks and "prunes" (simplifies) its logic during periods of high stability to optimize token usage and response speed.
 
 ---
 
-## 📂 Project Structure
+## 🏗️ System Architecture
 
-```bash
-├── config/              # Centralized Settings
-│   └── settings.py      # Project configurations
-├── core/                # Bio-Inspired Engine
-│   ├── hormone_system.py  # Hormonal logic & states
-│   ├── neural_engine.py   # LLM interface & evolution
-│   ├── memory_system.py   # Memory management logic
-│   ├── chroma_store.py    # Vector database interface
-│   └── inference_loop.py  # Main cognitive process
-├── templates/           # Web Dashboard UI
-├── main.py              # Application Entry Point
-└── tests/               # System Verification Tests
+```mermaid
+graph TD
+    User([User User]) <--> WS[WebSocket Gateway]
+    WS <--> Loop[Continuous Inference Loop]
+    
+    subgraph "Biological Model"
+        Hormones[Hormone Modulator<br/>Stress/Reward/Stability]
+        Neural[Neural Engine<br/>Dynamic Reasoning Depth]
+    end
+    
+    subgraph "Memory Hierarchy"
+        STM[STM Buffer<br/>Recent Context]
+        LTM[(LTM ChromaDB<br/>Semantic Storage)]
+        Dreamer[Consolidation Loop<br/>Dream State]
+    end
+    
+    Loop --> Hormones
+    Hormones --> Neural
+    Neural --> STM
+    STM -- "Consolidate" --> Dreamer
+    Dreamer --> LTM
+    LTM -- "Retrieve" --> Neural
 ```
 
 ---
 
-## 🚀 Installation & Setup
+## 🎬 Usage Scenarios
 
-1. **Clone & Navigate**
+> [!TIP]
+> **Try this:** Compliment the agent to see its "Reward" hormone spike, or challenge it to see how its "Stress" modulates its reasoning depth.
+
+| Interaction | Agent State | Behavioral Shift |
+| :--- | :--- | :--- |
+| **"Thank you, you're amazing!"** | 😊 EUPHORIC | Becomes more conversational and creative. |
+| **"Stop failing, this is bad."** | ⚠️ STRESSED | Becomes concise, formal, and focuses on error correction. |
+| **System Idle (1 min)** | 💤 DREAMING | Performs background memory consolidation and self-evolution. |
+
+---
+
+## 🛠️ Technical Stack
+
+- **Core:** Python 3.9+ with NumPy for physiological state simulation.
+- **Inference:** [Ollama](https://ollama.ai/) running `Qwen 2.5` (Optimized for low-latency reasoning).
+- **Storage:** [ChromaDB](https://www.trychroma.com/) for high-dimensional semantic search.
+- **Interface:** FastAPI & WebSockets for real-time visualization of internal thoughts.
+
+---
+
+## 🚀 Getting Started
+
+1. **Prerequisites**
+   - Install [Ollama](https://ollama.ai/)
+   - `ollama pull qwen2.5:1.5b`
+   - `ollama pull qwen2.5:0.5b`
+
+2. **Installation**
    ```bash
    git clone https://github.com/[YOUR_USERNAME]/Bio-Inspired-Cognitive-Agent.git
    cd Bio-Inspired-Cognitive-Agent
-   ```
-
-2. **Install Dependencies**
-   ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure Ollama**
-   Ensure Ollama is running and you have the required models:
-   ```bash
-   ollama pull qwen2.5:1.5b
-   ollama pull qwen2.5:0.5b
-   ```
-
-4. **Launch the Agent**
+3. **Launch**
    ```bash
    python main.py
    ```
-   Access the dashboard at: `http://localhost:8000`
+   *Dashboard available at: `http://localhost:8000`*
 
 ---
 
-## 👨‍💻 Developer & Contact
+## �‍💻 Developer & Vision
 
-**Juhomin**
-📧 [juhomin16@gmail.com](mailto:juhomin16@gmail.com)
+**JuHo Min**  
+*Student & Developer*
+
+> "I am passionate about building AI systems that mimic biological efficiency and adaptability. This project is a step towards agents that don't just compute, but experience."
 
 ---
-*This project is an experimental demonstration of biologically plausible AI architectures. License: MIT*
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Passion-red?style=for-the-badge" />
+</div>
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](./LICENSE)

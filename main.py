@@ -139,7 +139,8 @@ async def websocket_endpoint(websocket: WebSocket):
             if relevant:
                 await manager.broadcast({"type": "log", "msg": f"📚 Retrieved: {relevant[0][:50]}..."})
             
-            if hormone_sys.stress < 0.6:
+            current_hormones = hormone_sys.get_state()
+            if current_hormones['stress'] < 0.6:
                 thought = await neural_net.forward(f"Think briefly about: '{user_msg}'", "One short inner voice sentence.", use_fast=True)
                 await manager.broadcast({"type": "thought", "text": thought})
             
